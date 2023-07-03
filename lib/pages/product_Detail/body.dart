@@ -432,4 +432,44 @@ class Body extends StatelessWidget {
   }
 }
 
+class Buttom extends StatelessWidget {
+  final Function press;
+  const Buttom({super.key, required this.press});
 
+  @override
+  Widget build(BuildContext context) {
+    return SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: Container(
+        height: 200,
+        child: Column(
+          children: [
+            Row(
+              children: [],
+            ),
+            Expanded(
+                child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              physics: const BouncingScrollPhysics(),
+              itemCount: product2.length,
+              // gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              //   crossAxisCount: 2,
+              //   //height of ticket paper
+              //   childAspectRatio: 2.2,
+              // ),
+              itemBuilder: (context, index) => ItemCart(
+                product: product2[index],
+                press: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: ((context) => Product_Detail(
+                              product: product2[index],
+                            )))),
+              ),
+            ))
+          ],
+        ),
+      ),
+    );
+  }
+}
