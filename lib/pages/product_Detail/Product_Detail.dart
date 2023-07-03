@@ -12,7 +12,7 @@ import '../../models/catelog.dart';
 
 class Product_Detail extends StatelessWidget {
   final Product product;
-  final cartController = Get.put(CartController());
+  final cartController = Get.put(CartController());//cartcontroller to define after its added
   Product_Detail({key, required this.product}) : super(key: key);
 
   @override
