@@ -1,3 +1,4 @@
+
 import 'dart:developer';
 
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
@@ -91,15 +92,19 @@ class _NewhomepageState extends State<Newhomepage> {
 
     await flutterLocalNotificationsPlugin.show(
       0,
+
       "Shopify",
       "Welcome to Shopify",
+
+      "Jutta Junction",
+      "Welcome to Jutta Junction",
       notificationDetails,
     );
 
     DateTime time = DateTime.now().add(Duration(seconds: 10));
     //time based notification
     await flutterLocalNotificationsPlugin.schedule(
-        0, "Flash Sale", "Nike Blazers Mid 77", time, notificationDetails,
+
         payload: "ok");
   }
 
@@ -157,8 +162,13 @@ class _NewhomepageState extends State<Newhomepage> {
                   SizedBox(height: 10),
                   Center(
                     child: CircleAvatar(
+
                       radius: 40,
                       backgroundImage: AssetImage('assets/images/main.png'),
+
+                      radius: 30,
+                      backgroundImage: AssetImage('assets/images/Jutta.png'),
+
                     ),
                   ),
                   SizedBox(height: 10),
@@ -343,6 +353,7 @@ class _NewhomepageState extends State<Newhomepage> {
               onTap: () {
                 showAboutDialog(
                     context: context,
+<
                     applicationName: 'Shopify',
                     applicationVersion: '1.0.0',
                     applicationIcon: const CircleAvatar(
@@ -352,7 +363,18 @@ class _NewhomepageState extends State<Newhomepage> {
                     children: [
                       const Text(
                           'Shopify is a platform for all your footwear needs. We provide you with the best quality footwear at the best prices. We have a wide range of products from all the top brands. We also provide you with the best customer service. We are always here to help you out with any queries you may have. We hope you enjoy your shopping experience with us.'),
-                    ]);
+=======
+                    applicationName: 'Jutta Junction',
+                    applicationVersion: '1.0.0',
+                    applicationIcon: const CircleAvatar(
+                      radius: 30,
+                      backgroundImage: AssetImage('assets/images/Jutta.png'),
+                    ),
+                    children: [
+                      const Text(
+                          'Jutta Junction is a platform for all your footwear needs. We provide you with the best quality footwear at the best prices. We have a wide range of products from all the top brands. We also provide you with the best customer service. We are always here to help you out with any queries you may have. We hope you enjoy your shopping experience with us.'),
+
+                  ]);
               },
             ),
           ],
@@ -410,9 +432,14 @@ class _NewhomepageState extends State<Newhomepage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset(
+
               "assets/images/main.png",
               fit: BoxFit.contain,
               height: 190,
+=======
+              "assets/images/juttanew.png",
+              fit: BoxFit.contain,
+              height: 150,
             ),
           ],
         ),
