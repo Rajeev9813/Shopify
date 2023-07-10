@@ -47,7 +47,7 @@ class _LoginScreenState extends State<LoginScreen> {
         NotificationService.display(
           title: "Welcome back",
           body:
-          "Hello ${_authViewModel.loggedInUser?.fullName},\n Hope you are having a wonderful day.",
+          "Hello ${_authViewModel.loggedInUser?.fullName},\n Hope you are having a great day.",
         );
         Navigator.of(context).pushReplacementNamed('/NewHomePage');
       }).catchError((e) {
