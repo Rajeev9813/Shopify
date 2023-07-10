@@ -96,15 +96,15 @@ class _LoginScreenState extends State<LoginScreen> {
                     style: const TextStyle(
                         fontFamily: 'WorkSansSemiBold',
                         fontSize: 16.0,
-                        color: Colors.black),
+                        color: Colors.blue),
                     decoration: InputDecoration(
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
-                        borderSide: BorderSide(color: Colors.grey),
+                        borderSide: BorderSide(color: Colors.black),
                       ),
                       focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
-                        borderSide: BorderSide(color: Colors.blue),
+                        borderSide: BorderSide(color: Colors.grey),
                       ),
                       border: InputBorder.none,
                       prefixIcon: Icon(
