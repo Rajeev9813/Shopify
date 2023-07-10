@@ -225,3 +225,101 @@ Widget divider() {
       ),
     );
   }
+
+  bool _notificationEnabled = false;
+  Widget bwTiles() {
+    Color color = Colors.black;
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+      child: Container(
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(20),
+        ),
+        child: Column(
+          children: [
+            ListTile(
+              leading: Container(
+                child: Icon(Icons.history, color: color),
+                height: 30,
+                width: 30,
+                decoration: BoxDecoration(
+                  color: Colors.black.withOpacity(0.09),
+                  borderRadius: BorderRadius.circular(18),
+                ),
+              ),
+              title: Text("Order History",
+                  style: TextStyle(fontWeight: FontWeight.w700)),
+              trailing:
+                  Icon(Icons.arrow_forward_ios, color: Colors.purple, size: 20),
+              onTap: () {},
+            ),
+            divider(),
+            ListTile(
+              leading: Container(
+                child: Icon(Icons.notification_add, color: color),
+                height: 30,
+                width: 30,
+                decoration: BoxDecoration(
+                  color: Colors.black.withOpacity(0.09),
+                  borderRadius: BorderRadius.circular(18),
+                ),
+              ),
+              title: Text("Notification",
+                  style: TextStyle(fontWeight: FontWeight.w700)),
+              trailing: Switch(
+                value: _notificationEnabled,
+                activeColor: Colors.purple,
+                inactiveTrackColor: Colors
+                    .grey, // _notificationEnabled is a boolean variable that indicates the current state of the toggle switch
+                onChanged: (bool value) {
+                  setState(() {
+                    _notificationEnabled = value;
+                  });
+                },
+              ),
+            ),
+            divider(),
+            ListTile(
+              leading: Container(
+                child: Icon(Icons.info_outline, color: color),
+                height: 30,
+                width: 30,
+                decoration: BoxDecoration(
+                  color: Colors.black.withOpacity(0.09),
+                  borderRadius: BorderRadius.circular(18),
+                ),
+              ),
+              title:
+                  Text("FAQ's", style: TextStyle(fontWeight: FontWeight.w700)),
+              trailing:
+                  Icon(Icons.arrow_forward_ios, color: Colors.purple, size: 20),
+              onTap: () {
+                Navigator.of(context).pushNamed("/faqs");
+              },
+            ),
+            divider(),
+            ListTile(
+              leading: Container(
+                child: Icon(Icons.rate_review, color: color),
+                height: 30,
+                width: 30,
+                decoration: BoxDecoration(
+                  color: Colors.black.withOpacity(0.09),
+                  borderRadius: BorderRadius.circular(18),
+                ),
+              ),
+              title: Text("Rate Our App",
+                  style: TextStyle(fontWeight: FontWeight.w700)),
+              trailing:
+                  Icon(Icons.arrow_forward_ios, color: Colors.purple, size: 20),
+              onTap: () {
+                Navigator.push(context, showPopUpRatingDialog(context));
+              },
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
