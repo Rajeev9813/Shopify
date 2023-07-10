@@ -33,7 +33,7 @@ class _SearchState extends State<SearchPage> {
       appBar: AppBar(
         centerTitle: true,
         title: Text("Search"),
-        backgroundColor: Color.fromARGB(255, 12, 14, 14),
+        backgroundColor: Color.fromARGB(255, 17, 16, 16),
       ),
       body: Padding(
         padding: const EdgeInsets.all(10.0),
