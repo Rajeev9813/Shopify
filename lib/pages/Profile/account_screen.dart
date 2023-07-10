@@ -126,5 +126,102 @@ class _AccountScreenState extends State<AccountScreen> {
       ),
     );
   }
+Widget divider() {
+    return Padding(
+      padding: const EdgeInsets.all(0.5),
+      child: Divider(
+        thickness: 1.5,
+      ),
+    );
+  }
 
-  
+  Widget colorTiles() {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 5),
+      child: Container(
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(20),
+        ),
+        child: Column(
+          children: [
+            ListTile(
+              leading: Container(
+                child: Icon(Icons.person_outline, color: Colors.deepPurple),
+                height: 30,
+                width: 30,
+                decoration: BoxDecoration(
+                  color: Colors.deepPurple.withOpacity(0.09),
+                  borderRadius: BorderRadius.circular(18),
+                ),
+              ),
+              title: Text("Personal Data",
+                  style: TextStyle(fontWeight: FontWeight.w700)),
+              trailing:
+                  Icon(Icons.arrow_forward_ios, color: Colors.purple, size: 20),
+              onTap: () {
+                Navigator.of(context).pushNamed("/your_profile");
+              },
+            ),
+            divider(),
+            ListTile(
+              leading: Container(
+                child: Icon(Icons.email_outlined, color: Colors.blue),
+                height: 30,
+                width: 30,
+                decoration: BoxDecoration(
+                  color: Colors.blue.withOpacity(0.09),
+                  borderRadius: BorderRadius.circular(18),
+                ),
+              ),
+              title: Text("Change your email",
+                  style: TextStyle(fontWeight: FontWeight.w700)),
+              trailing:
+                  Icon(Icons.arrow_forward_ios, color: Colors.purple, size: 20),
+              onTap: () {
+                Navigator.of(context).pushNamed("/change_email");
+              },
+            ),
+            divider(),
+            ListTile(
+              leading: Container(
+                child: Icon(Icons.password_outlined, color: Colors.pink),
+                height: 30,
+                width: 30,
+                decoration: BoxDecoration(
+                  color: Colors.pink.withOpacity(0.09),
+                  borderRadius: BorderRadius.circular(18),
+                ),
+              ),
+              title: Text("Change your password",
+                  style: TextStyle(fontWeight: FontWeight.w700)),
+              trailing:
+                  Icon(Icons.arrow_forward_ios, color: Colors.purple, size: 20),
+              onTap: () {
+                Navigator.of(context).pushNamed("/changepassRoute");
+              },
+            ),
+            divider(),
+            ListTile(
+              leading: Container(
+                child: Icon(Icons.location_city, color: Colors.orange),
+                height: 30,
+                width: 30,
+                decoration: BoxDecoration(
+                  color: Colors.orange.withOpacity(0.09),
+                  borderRadius: BorderRadius.circular(18),
+                ),
+              ),
+              title: Text("Change your address",
+                  style: TextStyle(fontWeight: FontWeight.w700)),
+              trailing:
+                  Icon(Icons.arrow_forward_ios, color: Colors.purple, size: 20),
+              onTap: () {
+                Navigator.of(context).pushNamed("/change_address");
+              },
+            ),
+          ],
+        ),
+      ),
+    );
+  }
