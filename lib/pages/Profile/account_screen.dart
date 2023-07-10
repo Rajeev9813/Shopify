@@ -15,3 +15,30 @@ class AccountScreen extends StatefulWidget {
   @override
   State<AccountScreen> createState() => _AccountScreenState();
 }
+class _AccountScreenState extends State<AccountScreen> {
+  void logout() async {
+    _ui.loadState(true);
+    try {
+      await _auth.logout().then((value) {
+        Navigator.of(context).pushReplacementNamed('/login');
+      }).catchError((e) {
+        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+          content: Text(e.message.toString()),
+          backgroundColor: Colors.purpleAccent,
+          behavior: SnackBarBehavior.floating,
+          margin: EdgeInsets.all(50),
+          elevation: 20,
+        ));
+      });
+    } catch (err) {
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+        content: Text(err.toString()),
+        backgroundColor: Colors.purpleAccent,
+        behavior: SnackBarBehavior.floating,
+        margin: EdgeInsets.all(50),
+        elevation: 20,
+      ));
+    }
+    _ui.loadState(false);
+  }
+
