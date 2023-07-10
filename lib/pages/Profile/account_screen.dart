@@ -378,4 +378,45 @@ Widget divider() {
             ],
           ));
 
+
+  showPopUpThankYouDialog(BuildContext context) => showCupertinoDialog(
+      context: context,
+      builder: (context) => CupertinoAlertDialog(
+            title: Text("Thank You!"),
+            content: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Container(
+                  // height: 100,
+                  // width: 50,
+                  padding: EdgeInsets.fromLTRB(0, 20, 0, 20),
+                  // padding: EdgeInsets.symmetric(horizontal: 0),
+                  child: Align(
+                    alignment: Alignment.topCenter,
+                    child: Text("For rating our app",
+                        style: TextStyle(fontSize: 18),
+                        textAlign: TextAlign.center),
+                  ),
+                ),
+                Positioned(
+                    top: -100,
+                    child: Image.asset('assets/images/thankyou.png',
+                        width: 150, height: 150))
+                // createRating(),
+              ],
+            ),
+            actions: [
+              TextButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                child: Text(
+                  "OK",
+                  style: TextStyle(fontSize: 20),
+                ),
+              ),
+            ],
+          ));
+
   
