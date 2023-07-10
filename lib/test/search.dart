@@ -32,8 +32,8 @@ class _SearchState extends State<SearchPage> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text("search"),
-        backgroundColor: Color.fromARGB(200, 10, 12, 12),
+        title: Text("Search"),
+        backgroundColor: Color.fromARGB(255, 17, 16, 16),
       ),
       body: Padding(
         padding: const EdgeInsets.all(10.0),
@@ -46,7 +46,7 @@ class _SearchState extends State<SearchPage> {
               },
               decoration: InputDecoration(
                   contentPadding:
-                  const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+                  const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
                   hintText: 'Search......',
                   suffixIcon: const Icon(Icons.search),
                   border: OutlineInputBorder(
