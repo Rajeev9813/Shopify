@@ -72,4 +72,59 @@ class _AccountScreenState extends State<AccountScreen> {
     );
   }
 
- 
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      // appBar: AppBar(
+      //   centerTitle: true,
+      //   title: Text("Your Profile"),
+      //   backgroundColor: Colors.purple,
+      //   actions: [
+      //     IconButton(
+      //         icon: const Icon(Icons.sell),
+      //         tooltip: 'Open shopping cart',
+      //         onPressed: () {
+      //           Navigator.of(context).pushNamed("/my-products");
+      //         })
+      //   ],
+      // ),
+      appBar: AppBar(
+        backgroundColor: Colors.purple,
+        elevation: 0.0,
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back_ios_new)
+              .iconColor(Color.fromARGB(255, 255, 255, 255))
+              .box
+              .make(),
+          onPressed: () {
+            Navigator.pushNamed(context, "/NewHomePage");
+          },
+        ),
+        centerTitle: true,
+        title: Text(
+          "Profile",
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        actions: [
+          IconButton(
+              icon: const Icon(Icons.sell),
+              tooltip: 'Open shopping cart',
+              onPressed: () {
+                Navigator.of(context).pushNamed("/my-products");
+              })
+        ],
+      ),
+      body: Container(
+        color: Color(0xFFD6D6D6),
+        child: ListView(
+          children: [colorTiles(), bwTiles(), logoutButton()],
+        ),
+      ),
+    );
+  }
+
+  
