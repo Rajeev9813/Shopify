@@ -96,11 +96,11 @@ class _LoginScreenState extends State<LoginScreen> {
                     style: const TextStyle(
                         fontFamily: 'WorkSansSemiBold',
                         fontSize: 16.0,
-                        color: Colors.blue),
+                        color: Colors.black),
                     decoration: InputDecoration(
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
-                        borderSide: BorderSide(color: Colors.black),
+                        borderSide: BorderSide(color: Colors.grey),
                       ),
                       focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
