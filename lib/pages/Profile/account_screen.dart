@@ -126,7 +126,8 @@ class _AccountScreenState extends State<AccountScreen> {
       ),
     );
   }
-Widget divider() {
+
+  Widget divider() {
     return Padding(
       padding: const EdgeInsets.all(0.5),
       child: Divider(
@@ -323,8 +324,6 @@ Widget divider() {
     );
   }
 
-
-
   showPopUpRatingDialog(BuildContext context) => showCupertinoDialog(
       context: context,
       builder: (context) => CupertinoAlertDialog(
@@ -378,7 +377,6 @@ Widget divider() {
             ],
           ));
 
-
   showPopUpThankYouDialog(BuildContext context) => showCupertinoDialog(
       context: context,
       builder: (context) => CupertinoAlertDialog(
@@ -419,4 +417,37 @@ Widget divider() {
             ],
           ));
 
-  
+  Widget logoutButton() {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 10),
+      child: SizedBox(
+        width: double.infinity,
+        height: 60,
+        child: ElevatedButton(
+          onPressed: () {
+            Navigator.of(context).pop();
+            Navigator.of(context).push(MaterialPageRoute(
+                builder: (BuildContext context) => LoginScreen()));
+
+            logout();
+            // Add your code for logging out here
+          },
+          style: ElevatedButton.styleFrom(
+            primary: Colors.purple,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(28),
+            ),
+          ),
+          child: const Text(
+            "Log out",
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 22,
+              color: Colors.white,
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
