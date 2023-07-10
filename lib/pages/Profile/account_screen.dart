@@ -323,3 +323,59 @@ Widget divider() {
     );
   }
 
+
+
+  showPopUpRatingDialog(BuildContext context) => showCupertinoDialog(
+      context: context,
+      builder: (context) => CupertinoAlertDialog(
+            title: Text("Your opinion matters to us!"),
+            content: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Container(
+                  padding: EdgeInsets.fromLTRB(0, 20, 0, 20),
+                  // padding: EdgeInsets.symmetric(horizontal: 0),
+                  child: Align(
+                    alignment: Alignment.topCenter,
+                    child: Text(
+                        "If you enjoy using our app, would you mind rating?",
+                        style: TextStyle(fontSize: 18),
+                        textAlign: TextAlign.center),
+                  ),
+                ),
+                createRating(),
+              ],
+            ),
+            actions: [
+              TextButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                  // Navigator.push(context);
+                },
+                child: Text(
+                  "Cancel",
+                  style: TextStyle(fontSize: 20),
+                ),
+              ),
+              TextButton(
+                onPressed: () {
+                  if (rating == 0) {
+                    Navigator.pop(context);
+                  } else {
+                    Navigator.pop(context);
+                    Navigator.push(context, showPopUpThankYouDialog(context));
+                    setState(() {
+                      rating = 0;
+                    });
+                  }
+                },
+                child: Text(
+                  "OK",
+                  style: TextStyle(fontSize: 20),
+                ),
+              ),
+            ],
+          ));
+
+  
