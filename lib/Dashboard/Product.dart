@@ -41,11 +41,11 @@ class Product{
 ),
        Product(
       id:2,
-      title:"tan",
-      price:15000,
+      title:"Stan",
+      price:5000,
       description:"stan shoes is one of the best selling shoes in our app",
       image:"assets/images/stan.png",
-      color: Color.fromARGB(250, 198, 194, 194),
+      color: Color.fromARGB(255, 195, 195, 195),
 ),
     Product(
       id:3,
