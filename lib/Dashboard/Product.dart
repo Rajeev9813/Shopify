@@ -1,7 +1,7 @@
-import 'package:flutter/material.dart';
+ import 'package:flutter/material.dart';
 // class CatalogModel {
 //   static List<Product> product;
-
+//categories
 //   // Get Item by ID
 //   Product getById(int id) =>
 //       product.firstWhere((element) => element.id == id, orElse: null);
@@ -9,6 +9,7 @@ import 'package:flutter/material.dart';
 //   // Get Item by position
 //   Product getByPosition(int pos) => product[pos];
 // }
+ // categories page//
 
 class Product{
   
