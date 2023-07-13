@@ -33,19 +33,19 @@ class Product{
   List<Product> product1=[
     Product(
       id:1,
-      title:"jordan",
-      price:10000,
+      title:"Jordan",
+      price:15000,
       description:"jordan shoes is one of the best selling shoes in our app",
       image:"assets/images/jordan4.png",
-      color: Color.fromARGB(250, 230, 228, 228),
+      color: Color.fromARGB(255, 236, 226, 226),
 ),
        Product(
       id:2,
-      title:"Stan",
-      price:5000,
+      title:"tan",
+      price:15000,
       description:"stan shoes is one of the best selling shoes in our app",
       image:"assets/images/stan.png",
-      color: Color.fromARGB(255, 195, 195, 195),
+      color: Color.fromARGB(250, 198, 194, 194),
 ),
     Product(
       id:3,
