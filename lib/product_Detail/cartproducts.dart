@@ -5,7 +5,6 @@ import 'package:jutta_junction/Controller/cart_controller.dart';
 import 'package:jutta_junction/Dashboard/Product.dart';
 import 'package:jutta_junction/pages/chatbot/ChatPage.dart';
 
-/////delete product code
 class CartProducts extends StatelessWidget {
   final CartController controller = Get.put(CartController());
 
@@ -46,41 +45,63 @@ class CartProductCard extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20.0),
       child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-      Padding(
-      padding: const EdgeInsets.only(top:10,bottom: 10),
-      child: Image.asset(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(top:10,bottom: 10),
+            child: Image.asset(
 
-        product.image,
-        width: 80,
-        height: 60,
-        fit: BoxFit.cover,
+              product.image,
+              width: 80,
+              height: 60,
+              fit: BoxFit.cover,
+            ),
+          ),
+          Expanded(
+              child: Column(
+                children: [
+                  Text(
+                    product.title,
+                    style: TextStyle(
+
+                      // fontWeight: FontWeight.bold
+                    ),
+                  ),
+                  Text("Rs${product.price}",
+                      style: TextStyle(fontWeight: FontWeight.bold))
+                ],
+              )),
+          IconButton(
+              onPressed: () {
+                controller.removeProduct(product);
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    content: Text("Product is Removed"
+                        " You have added the ${product.title} to the cart",
+                      textAlign: TextAlign.center,
+                    ),
+                    duration: Duration(seconds: 2),
+                  ),
+                );
+              },
+              icon: Icon(Icons.remove_circle_outline)),
+          Text('${quantity}'),
+          IconButton(
+              onPressed: () {
+                controller.addProduct(product);
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    content: Text("Product is Added"
+                        " You have added the ${product.title} to the cart",
+                      textAlign: TextAlign.center,
+                    ),
+                    duration: Duration(seconds: 2),
+                  ),
+                );
+              },
+              icon: Icon(Icons.add_circle_outline)),
+        ],
       ),
-    ),
-    Expanded(
-    child: Column(
-    children: [
-    Text(
-    product.title,
-    style: TextStyle(
-
-    // fontweight: fontweight.bold
-    ),
-    ),
-    Text("Rs${product.price}",
-    style: TextStyle(fontWeight: FontWeight.bold))
-    ],
-    )),
-    IconButton(
-    onPressed: () {
-    controller.removeProduct(product);
-    ScaffoldMessenger.of(context).showSnackBar(
-    SnackBar(
-    content: Text("Product is Removed"
-    " You have added the ${product.title} to the cart",
-    textAlign: TextAlign.center,
-    ),
-    duration: Duration(seconds: 2),
-    ),
     );
+  }
+}
