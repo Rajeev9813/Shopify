@@ -58,3 +58,17 @@ class CartProductCard extends StatelessWidget {
         fit: BoxFit.cover,
       ),
     ),
+    Expanded(
+    child: Column(
+    children: [
+    Text(
+    product.title,
+    style: TextStyle(
+
+    // fontWeight: FontWeight.bold
+    ),
+    ),
+    Text("Rs${product.price}",
+    style: TextStyle(fontWeight: FontWeight.bold))
+    ],
+    )),
