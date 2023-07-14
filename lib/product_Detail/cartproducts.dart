@@ -28,3 +28,15 @@ class CartProducts extends StatelessWidget {
   }
 }
 
+class CartProductCard extends StatelessWidget {
+  final CartController controller;
+  final Product product;
+  final int quantity;
+  final int index;
+
+  CartProductCard(
+      {required this.controller,
+        required this.product,
+        required this.quantity,
+        required this.index});
+  
