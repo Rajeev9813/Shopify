@@ -1,6 +1,6 @@
 // To parse this JSON data, do
 //
-//     final ratingReviewModel = ratingReviewModelFromJson(jsonString);
+// ///   Final ratingReviewModel = ratingReviewModelFromJson(jsonString);
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:meta/meta.dart';
