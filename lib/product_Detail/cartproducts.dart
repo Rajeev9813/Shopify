@@ -65,10 +65,22 @@ class CartProductCard extends StatelessWidget {
     product.title,
     style: TextStyle(
 
-    // fontWeight: FontWeight.bold
+    // fontweight: fontweight.bold
     ),
     ),
     Text("Rs${product.price}",
     style: TextStyle(fontWeight: FontWeight.bold))
     ],
     )),
+    IconButton(
+    onPressed: () {
+    controller.removeProduct(product);
+    ScaffoldMessenger.of(context).showSnackBar(
+    SnackBar(
+    content: Text("Product is Removed"
+    " You have added the ${product.title} to the cart",
+    textAlign: TextAlign.center,
+    ),
+    duration: Duration(seconds: 2),
+    ),
+    );
