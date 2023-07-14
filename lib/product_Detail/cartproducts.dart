@@ -5,6 +5,7 @@ import 'package:jutta_junction/Controller/cart_controller.dart';
 import 'package:jutta_junction/Dashboard/Product.dart';
 import 'package:jutta_junction/pages/chatbot/ChatPage.dart';
 
+/////delete product code
 class CartProducts extends StatelessWidget {
   final CartController controller = Get.put(CartController());
 
@@ -39,4 +40,21 @@ class CartProductCard extends StatelessWidget {
         required this.product,
         required this.quantity,
         required this.index});
-  
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 20.0),
+      child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+      Padding(
+      padding: const EdgeInsets.only(top:10,bottom: 10),
+      child: Image.asset(
+
+        product.image,
+        width: 80,
+        height: 60,
+        fit: BoxFit.cover,
+      ),
+    ),
