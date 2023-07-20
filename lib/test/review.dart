@@ -8,7 +8,7 @@ import '../models/ratingreview_model.dart';
 
 class UserRatingReview extends StatefulWidget {
   const UserRatingReview({Key? key}) : super(key: key);
-
+ //code for review and rating
   @override
   State<UserRatingReview> createState() => _UserRatingReviewState();
 }
