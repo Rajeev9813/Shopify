@@ -30,3 +30,16 @@ class _UserRatingReviewState extends State<UserRatingReview> {
         borderSide: BorderSide(width: 2, color: Colors.white),
         borderRadius: BorderRadius.circular(30));
   }
+
+  Future<void> submitRatingReview() async {
+    FirebaseFirestore db = FirebaseFirestore.instance;
+    final data = RatingReviewModel(
+      rating: "$newRating",
+      review: review.text, username: '',
+    );
+
+    db.collection("ratingreview").add(data.toJson()).then((value) {
+      ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text("Rating and review submitted ")));
+    });
+  }
