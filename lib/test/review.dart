@@ -16,3 +16,17 @@ class UserRatingReview extends StatefulWidget {
 class _UserRatingReviewState extends State<UserRatingReview> {
   TextEditingController review = new TextEditingController();
   final form = GlobalKey<FormState>();
+
+  double newRating = 0.0;
+  hintStyle() {
+    TextStyle(
+      fontWeight: FontWeight.bold,
+      color: Colors.white,
+    );
+  }
+
+  formsOutline() {
+    OutlineInputBorder(
+        borderSide: BorderSide(width: 2, color: Colors.white),
+        borderRadius: BorderRadius.circular(30));
+  }
