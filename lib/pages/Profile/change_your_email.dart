@@ -265,7 +265,7 @@ class _ChangeEmailState extends State<ChangeEmail> {
             // Add your code for logging out here
           },
           style: ElevatedButton.styleFrom(
-            primary: Colors.purple,
+            primary: Colors.red,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(28),
             ),
