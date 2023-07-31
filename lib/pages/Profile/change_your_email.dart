@@ -45,3 +45,12 @@ class _ChangeEmailState extends State<ChangeEmail> {
       }).catchError((error) {
         print("Error updating email : $error");
       });
+      ScaffoldMessenger.of(context)
+          .showSnackBar(SnackBar(content: Text("Email updated")));
+      Navigator.of(context).pop();
+    } catch (e) {
+      ScaffoldMessenger.of(context)
+          .showSnackBar(SnackBar(content: Text("Error")));
+    }
+    _ui.loadState(false);
+  }
