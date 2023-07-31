@@ -28,3 +28,20 @@ class _ChangeEmailState extends State<ChangeEmail> {
     });
     super.initState();
   }
+  void editEmail() async {
+    _ui.loadState(true);
+    try {
+      _authViewModel.user?.updateEmail(new_emailController.text);
+      FirebaseService.db
+          .collection("users")
+          .where("user_id", isEqualTo: _authViewModel.user?.uid)
+          .get()
+          .then((querySnapshot) {
+        querySnapshot.docs.forEach((doc) {
+          doc.reference.set({
+            "email": new_emailController.text,
+          }, SetOptions(merge: true));
+        });
+      }).catchError((error) {
+        print("Error updating email : $error");
+      });
