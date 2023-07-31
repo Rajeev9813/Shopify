@@ -54,3 +54,36 @@ class _ChangeEmailState extends State<ChangeEmail> {
     }
     _ui.loadState(false);
   }
+  Widget divider() {
+    return Padding(
+      padding: const EdgeInsets.all(0.5),
+      child: Divider(
+        thickness: 1.5,
+      ),
+    );
+  }
+
+  TextEditingController emailController = TextEditingController();
+  TextEditingController new_emailController = TextEditingController();
+  TextEditingController confirm_emailController = TextEditingController();
+  @override
+  Widget build(BuildContext context) {
+    return Consumer<AuthViewModel>(builder: (context, authVM, child) {
+      return Scaffold(
+        appBar: AppBar(
+          centerTitle: true,
+          title: Text('Change your Email'),
+          backgroundColor: Colors.purple,
+        ),
+        body: Container(
+          color: Color(0xFFD6D6D6),
+          child: ListView(
+            children: [
+              colorTiles(authVM),
+            ],
+          ),
+        ),
+        bottomNavigationBar: SubmitButtons(),
+      );
+    });
+  }
