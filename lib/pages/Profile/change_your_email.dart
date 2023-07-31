@@ -28,6 +28,7 @@ class _ChangeEmailState extends State<ChangeEmail> {
     });
     super.initState();
   }
+
   void editEmail() async {
     _ui.loadState(true);
     try {
@@ -45,6 +46,7 @@ class _ChangeEmailState extends State<ChangeEmail> {
       }).catchError((error) {
         print("Error updating email : $error");
       });
+
       ScaffoldMessenger.of(context)
           .showSnackBar(SnackBar(content: Text("Email updated")));
       Navigator.of(context).pop();
@@ -54,6 +56,7 @@ class _ChangeEmailState extends State<ChangeEmail> {
     }
     _ui.loadState(false);
   }
+
   Widget divider() {
     return Padding(
       padding: const EdgeInsets.all(0.5),
@@ -87,6 +90,7 @@ class _ChangeEmailState extends State<ChangeEmail> {
       );
     });
   }
+
   Widget colorTiles(AuthViewModel authVM) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 50),
@@ -248,6 +252,7 @@ class _ChangeEmailState extends State<ChangeEmail> {
       ),
     );
   }
+
   Widget SubmitButtons() {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 10),
