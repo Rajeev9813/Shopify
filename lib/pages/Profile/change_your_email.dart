@@ -248,3 +248,33 @@ class _ChangeEmailState extends State<ChangeEmail> {
       ),
     );
   }
+  Widget SubmitButtons() {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 10),
+      child: SizedBox(
+        width: double.infinity,
+        height: 70,
+        child: ElevatedButton(
+          onPressed: () {
+            editEmail();
+            // Add your code for logging out here
+          },
+          style: ElevatedButton.styleFrom(
+            primary: Colors.purple,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(28),
+            ),
+          ),
+          child: const Text(
+            "Submit",
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 22,
+              color: Colors.white,
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
