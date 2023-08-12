@@ -95,4 +95,11 @@ class _SettingPageState extends State<SettingPage> {
             SizedBox(
               height: 50,
             ),
-            
+            Center(
+              child: OutlinedButton(
+                style: OutlinedButton.styleFrom(
+                  padding: EdgeInsets.symmetric(horizontal: 40),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20)),
+                ),
+               
