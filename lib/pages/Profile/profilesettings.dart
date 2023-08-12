@@ -82,4 +82,17 @@ class _SettingPageState extends State<SettingPage> {
                 )
               ],
             ),
+            Divider(
+              height: 15,
+              thickness: 2,
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            buildNotificationOptionRow("New for you", true),
+            buildNotificationOptionRow("Delivery Notification", true),
+            buildNotificationOptionRow("Order Notification", false),
+            SizedBox(
+              height: 50,
+            ),
             
