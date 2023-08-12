@@ -177,3 +177,18 @@ class _SettingPageState extends State<SettingPage> {
                     Text("Option 3"),
                   ],
                 ),
+                actions: [
+                  FloatingActionButton(
+                      onPressed: () {
+                        Navigator.of(context).pop();
+                      },
+                      child: Text("Close"))
+                ],
+              );
+            });
+      },
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 8.0),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+         
