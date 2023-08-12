@@ -76,19 +76,19 @@ class _AccountScreenState extends State<AccountScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        title: Text("Your Profile"),
-        backgroundColor: Colors.purple,
-        actions: [
-          IconButton(
-              icon: const Icon(Icons.sell),
-              tooltip: 'Open shopping cart',
-              onPressed: () {
-                Navigator.of(context).pushNamed("/my-products");
-              })
-        ],
-      ),
+      // appBar: AppBar(
+      //   centerTitle: true,
+      //   title: Text("Your Profile"),
+      //   backgroundColor: Colors.purple,
+      //   actions: [
+      //     IconButton(
+      //         icon: const Icon(Icons.sell),
+      //         tooltip: 'Open shopping cart',
+      //         onPressed: () {
+      //           Navigator.of(context).pushNamed("/my-products");
+      //         })
+      //   ],
+      // ),
       appBar: AppBar(
         backgroundColor: Colors.purple,
         elevation: 0.0,
@@ -272,8 +272,7 @@ class _AccountScreenState extends State<AccountScreen> {
               trailing: Switch(
                 value: _notificationEnabled,
                 activeColor: Colors.purple,
-                inactiveTrackColor: Colors
-                    .grey, // _notificationEnabled is a boolean variable that indicates the current state of the toggle switch
+                inactiveTrackColor: Colors.grey,
                 onChanged: (bool value) {
                   setState(() {
                     _notificationEnabled = value;
