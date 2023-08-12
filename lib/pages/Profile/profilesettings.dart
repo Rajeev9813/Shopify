@@ -151,7 +151,12 @@ class _SettingPageState extends State<SettingPage> {
               fontWeight: FontWeight.w500,
               color: Colors.grey[600]),
         ),
-        
-
-            
-               
+        Transform.scale(
+            scale: 0.7,
+            child: CupertinoSwitch(
+              value: true,
+              onChanged: (bool val) {},
+            ))
+      ],
+    );
+  }
