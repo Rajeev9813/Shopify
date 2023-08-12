@@ -324,6 +324,7 @@ class _AccountScreenState extends State<AccountScreen> {
     );
   }
 
+//dialogue
   showPopUpRatingDialog(BuildContext context) => showCupertinoDialog(
       context: context,
       builder: (context) => CupertinoAlertDialog(
