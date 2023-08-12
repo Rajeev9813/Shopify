@@ -1,3 +1,4 @@
+// import
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
@@ -11,7 +12,7 @@ import 'package:velocity_x/velocity_x.dart';
 
 class AccountScreen extends StatefulWidget {
   const AccountScreen({super.key});
-
+//override
   @override
   State<AccountScreen> createState() => _AccountScreenState();
 }
@@ -271,8 +272,7 @@ class _AccountScreenState extends State<AccountScreen> {
               trailing: Switch(
                 value: _notificationEnabled,
                 activeColor: Colors.purple,
-                inactiveTrackColor: Colors
-                    .grey, // _notificationEnabled is a boolean variable that indicates the current state of the toggle switch
+                inactiveTrackColor: Colors.grey,
                 onChanged: (bool value) {
                   setState(() {
                     _notificationEnabled = value;
@@ -324,6 +324,7 @@ class _AccountScreenState extends State<AccountScreen> {
     );
   }
 
+//dialogue
   showPopUpRatingDialog(BuildContext context) => showCupertinoDialog(
       context: context,
       builder: (context) => CupertinoAlertDialog(
@@ -350,7 +351,6 @@ class _AccountScreenState extends State<AccountScreen> {
               TextButton(
                 onPressed: () {
                   Navigator.pop(context);
-                  // Navigator.push(context);
                 },
                 child: Text(
                   "Cancel",
@@ -376,7 +376,7 @@ class _AccountScreenState extends State<AccountScreen> {
               ),
             ],
           ));
-
+//show
   showPopUpThankYouDialog(BuildContext context) => showCupertinoDialog(
       context: context,
       builder: (context) => CupertinoAlertDialog(
@@ -430,7 +430,6 @@ class _AccountScreenState extends State<AccountScreen> {
                 builder: (BuildContext context) => LoginScreen()));
 
             logout();
-            // Add your code for logging out here
           },
           style: ElevatedButton.styleFrom(
             primary: Colors.purple,
