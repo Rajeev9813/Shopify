@@ -34,7 +34,6 @@ class _SettingPageState extends State<SettingPage> {
               "Settings",
               style: TextStyle(fontSize: 25, fontWeight: FontWeight.w500),
             ),
-            
             SizedBox(
               height: 40,
             ),
@@ -59,7 +58,8 @@ class _SettingPageState extends State<SettingPage> {
             ),
             SizedBox(
               height: 10,
-            ),buildAccountOptionRow(context, "Change Password"),
+            ),
+            buildAccountOptionRow(context, "Change Password"),
             buildAccountOptionRow(context, "Shipping Address"),
             buildAccountOptionRow(context, "Social"),
             buildAccountOptionRow(context, "Language"),
@@ -101,7 +101,8 @@ class _SettingPageState extends State<SettingPage> {
                   padding: EdgeInsets.symmetric(horizontal: 40),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20)),
-                ), onPressed: () {
+                ),
+                onPressed: () {
                   showDialog(
                     context: context,
                     builder: (ctx) => AlertDialog(
@@ -191,7 +192,7 @@ class _SettingPageState extends State<SettingPage> {
         padding: const EdgeInsets.symmetric(vertical: 8.0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                 children: [
+          children: [
             Text(
               title,
               style: TextStyle(
@@ -200,4 +201,13 @@ class _SettingPageState extends State<SettingPage> {
                 color: Colors.grey[600],
               ),
             ),
-            
+            Icon(
+              Icons.arrow_forward_ios,
+              color: Colors.grey,
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
