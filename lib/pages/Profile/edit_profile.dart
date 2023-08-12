@@ -38,4 +38,22 @@ class _ProfileInfoState extends State<ProfileInfo> {
     });
   }
 
+  Widget UserName(AuthViewModel authVM) {
+    return Text(
+      authVM.loggedInUser != null
+          ? authVM.loggedInUser!.fullName.toString()
+          : "Guest",
+      style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold),
+    );
+  }
+
+  Widget userEmail(AuthViewModel authVM) {
+    return Text(
+      authVM.loggedInUser != null
+          ? authVM.loggedInUser!.email.toString()
+          : "Guest",
+      style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold),
+    );
+  }
+
   
