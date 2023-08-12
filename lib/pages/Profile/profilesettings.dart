@@ -59,5 +59,27 @@ class _SettingPageState extends State<SettingPage> {
             ),
             SizedBox(
               height: 10,
+            ),buildAccountOptionRow(context, "Change Password"),
+            buildAccountOptionRow(context, "Shipping Address"),
+            buildAccountOptionRow(context, "Social"),
+            buildAccountOptionRow(context, "Language"),
+            buildAccountOptionRow(context, "Privacy and Security"),
+            SizedBox(
+              height: 40,
+            ),
+            Row(
+              children: [
+                Icon(
+                  Icons.volume_up_outlined,
+                  color: Colors.green,
+                ),
+                SizedBox(
+                  width: 8,
+                ),
+                Text(
+                  "Notification",
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                )
+              ],
             ),
             
