@@ -6,3 +6,11 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:jutta_junction/Controller/cart_controller.dart';
 import 'package:jutta_junction/pages/product_Detail/body.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+
+import '../../Dashboard/Product.dart';
+import '../../models/catelog.dart';
+
+class Product_Detail extends StatelessWidget {
+  final Product product;
+  final cartController = Get.put(CartController());
+  Product_Detail({key, required this.product}) : super(key: key);
