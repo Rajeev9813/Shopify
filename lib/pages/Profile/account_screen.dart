@@ -12,7 +12,7 @@ import 'package:velocity_x/velocity_x.dart';
 
 class AccountScreen extends StatefulWidget {
   const AccountScreen({super.key});
-
+//override
   @override
   State<AccountScreen> createState() => _AccountScreenState();
 }
@@ -76,19 +76,19 @@ class _AccountScreenState extends State<AccountScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   centerTitle: true,
-      //   title: Text("Your Profile"),
-      //   backgroundColor: Colors.purple,
-      //   actions: [
-      //     IconButton(
-      //         icon: const Icon(Icons.sell),
-      //         tooltip: 'Open shopping cart',
-      //         onPressed: () {
-      //           Navigator.of(context).pushNamed("/my-products");
-      //         })
-      //   ],
-      // ),
+      appBar: AppBar(
+        centerTitle: true,
+        title: Text("Your Profile"),
+        backgroundColor: Colors.purple,
+        actions: [
+          IconButton(
+              icon: const Icon(Icons.sell),
+              tooltip: 'Open shopping cart',
+              onPressed: () {
+                Navigator.of(context).pushNamed("/my-products");
+              })
+        ],
+      ),
       appBar: AppBar(
         backgroundColor: Colors.purple,
         elevation: 0.0,
