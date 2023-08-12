@@ -19,3 +19,14 @@ class RatingReviewRepository{
         .snapshots();
     return response;
   }
+
+  Future<RatingReviewModel?> getOneData(String id) async {
+    DocumentSnapshot<RatingReviewModel> response = await ref.doc(id).get();
+    return response.data();
+  }
+
+  Future<void> addRatingReview(RatingReviewModel data) async {
+    await ref.add(data);
+  }
+
+}
