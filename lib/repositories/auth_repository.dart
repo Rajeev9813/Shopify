@@ -43,3 +43,15 @@ class AuthRepository {
       rethrow;
     }
   }
+  Future<UserModel> getUserDetail(String id) async {
+    try {
+      final response = await userRef.where("user_id", isEqualTo: id).get();
+
+      var user = response.docs[0].data();
+      user.fcm = "";
+      await userRef.doc(user.userId).set(user);
+      return user;
+    } catch (err) {
+      rethrow;
+    }
+  }
