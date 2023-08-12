@@ -14,3 +14,11 @@ class Product_Detail extends StatelessWidget {
   final Product product;
   final cartController = Get.put(CartController());
   Product_Detail({key, required this.product}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    List<Item> _cart = [];
+    return Scaffold(
+      resizeToAvoidBottomInset: false,
+
+      
