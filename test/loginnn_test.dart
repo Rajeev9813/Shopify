@@ -47,3 +47,13 @@ void main() {
     when(mockFirebaseAuth.signInWithEmailAndPassword(
         email: email, password: password))
         .thenAnswer((_) async => mockUserCredential);
+    // Call the login function using the mock FirebaseAuth object.
+    final AuthRepository authRepository =
+    AuthRepository(firebaseAuth: mockFirebaseAuth);
+    final UserCredential credential =
+    await authRepository.login(email, password);
+
+    // Check that the UserCredential object returned by the login function is not null.
+    expect(credential.user, isNotNull);
+  });
+}
