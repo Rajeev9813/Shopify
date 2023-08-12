@@ -31,3 +31,15 @@ class AuthRepository {
       rethrow;
     }
   }
+  Future<UserCredential> login(String email, String password) async {
+    try {
+      print(email);
+      UserCredential uc = await FirebaseService.firebaseAuth
+          .signInWithEmailAndPassword(email: email, password: password);
+      print("REPOSITORY " " " + uc.toString());
+      return uc;
+    } catch (err) {
+      print(err);
+      rethrow;
+    }
+  }
