@@ -31,3 +31,19 @@ class FirebaseService {
 }
 
 class MockFirebaseAuth extends Mock implements FirebaseAuth {}
+void main() {
+  final email = 'ishu@gmail.com';
+  final password = 'ishu12345';
+
+  test('login', () async {
+    final mockFirebaseAuth = MockFirebaseAuth();
+    final mockUserCredential = MockUserCredential();
+    final mockUser = MockUser();
+
+    // Set up the mock UserCredential object.
+    when(mockUserCredential.user).thenReturn(mockUser);
+
+    // Set up the mock FirebaseAuth object.
+    when(mockFirebaseAuth.signInWithEmailAndPassword(
+        email: email, password: password))
+        .thenAnswer((_) async => mockUserCredential);
