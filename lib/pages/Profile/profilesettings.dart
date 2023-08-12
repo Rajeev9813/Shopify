@@ -160,3 +160,20 @@ class _SettingPageState extends State<SettingPage> {
       ],
     );
   }
+
+  GestureDetector buildAccountOptionRow(BuildContext context, String title) {
+    return GestureDetector(
+      onTap: () {
+        showDialog(
+            context: context,
+            builder: (BuildContext context) {
+              return AlertDialog(
+                title: Text(title),
+                content: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text("Option 1"), //changes are yet to made here
+                    Text("Option 2"),
+                    Text("Option 3"),
+                  ],
+                ),
