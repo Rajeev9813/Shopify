@@ -83,3 +83,30 @@ class _ProfileInfoState extends State<ProfileInfo> {
     );
   }
 
+  @override
+  Widget build(BuildContext context) {
+    return Consumer<AuthViewModel>(builder: (context, authVM, chid) {
+      return Scaffold(
+          appBar: AppBar(
+          backgroundColor: Colors.purple,
+          elevation: 0.0,
+          leading: IconButton(
+          icon: const Icon(Icons.arrow_back_ios_new)
+          .iconColor(Color.fromARGB(255, 255, 255, 255))
+          .box
+          .make(),
+    onPressed: () {
+    Navigator.pushNamed(context, "/NewHomePage");
+    },
+    ),
+    centerTitle: true,
+    title: Text(
+    "Profile",
+    style: TextStyle(
+    color: Colors.white,
+    fontSize: 20,
+    fontWeight: FontWeight.bold,
+    ),
+    ),
+    ),
+    body: Column(
