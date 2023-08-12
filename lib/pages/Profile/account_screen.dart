@@ -351,7 +351,6 @@ class _AccountScreenState extends State<AccountScreen> {
               TextButton(
                 onPressed: () {
                   Navigator.pop(context);
-                  // Navigator.push(context);
                 },
                 child: Text(
                   "Cancel",
@@ -377,7 +376,7 @@ class _AccountScreenState extends State<AccountScreen> {
               ),
             ],
           ));
-
+//show
   showPopUpThankYouDialog(BuildContext context) => showCupertinoDialog(
       context: context,
       builder: (context) => CupertinoAlertDialog(
@@ -431,7 +430,6 @@ class _AccountScreenState extends State<AccountScreen> {
                 builder: (BuildContext context) => LoginScreen()));
 
             logout();
-            // Add your code for logging out here
           },
           style: ElevatedButton.styleFrom(
             primary: Colors.purple,
