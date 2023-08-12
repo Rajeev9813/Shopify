@@ -32,4 +32,15 @@ class Product_Detail extends StatelessWidget {
         ),
       ),
 
-      
+      body: Body(
+        product: product,
+      ),
+
+      bottomNavigationBar: CurvedNavigationBar(
+        backgroundColor: Color.fromARGB(255, 2, 5, 8),
+        items: <Widget>[
+          Icon(Icons.home),
+          Icon(Icons.chat),
+          Icon(Icons.shopping_cart),
+          Icon(
+           
