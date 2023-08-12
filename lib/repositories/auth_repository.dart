@@ -11,3 +11,10 @@ class AuthRepository {
     },
     toFirestore: (model, _) => model.toJson(),
   );
+  Future<UserCredential?> register(UserModel user) async {
+    try {
+      final response =
+      await userRef.where("username", isEqualTo: user.username!).get();
+      if (response.size != 0) {
+        throw Exception("Username already exists");
+      }
