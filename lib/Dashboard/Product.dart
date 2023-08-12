@@ -25,7 +25,7 @@ class Product{
     required this.color,
 
   });
-
+//get and list
   get length => null;
 
   get product1 => null;
