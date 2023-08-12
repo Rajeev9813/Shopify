@@ -12,3 +12,10 @@ class RatingReviewRepository{
     },
     toFirestore: (model, _) => model.toJson(),
   );
+
+
+  Stream<QuerySnapshot<RatingReviewModel>> getData()  {
+    Stream<QuerySnapshot<RatingReviewModel>> response = ref
+        .snapshots();
+    return response;
+  }
