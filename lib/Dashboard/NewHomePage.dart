@@ -33,7 +33,7 @@ Widget _buildBrands(String image) {
     ),
   );
 }
-
+//homespaces
 class _NewhomepageState extends State<Newhomepage> {
   final GlobalKey<ScaffoldState> _key = GlobalKey<ScaffoldState>();
 

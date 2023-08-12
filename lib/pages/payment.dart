@@ -169,7 +169,7 @@ class _PaymentState extends State<Payment> {
   }
 
   // method to handle failure
-  void onFailure(PaymentFailureModel failure) {
+  void onFailure(PaymentFailureModel failure) { //define failure method
     showDialog(
         context: context,
         builder: (context) {
