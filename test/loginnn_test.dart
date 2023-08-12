@@ -57,3 +57,7 @@ void main() {
     expect(credential.user, isNotNull);
   });
 }
+// Mock classes.
+class MockUserCredential extends Mock implements UserCredential {}
+
+class MockUser extends Mock implements User {}
