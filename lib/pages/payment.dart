@@ -1,3 +1,4 @@
+//paclages 
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -132,7 +133,7 @@ class _PaymentState extends State<Payment> {
       ),
     );
   }
-
+//dependency for khalti 
   khaltiWallet() {
     KhaltiScope.of(context).pay(
       config: PaymentConfig(
