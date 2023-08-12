@@ -1,6 +1,5 @@
-
+//packages
 import 'dart:developer';
-
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fluid_bottom_nav_bar/fluid_bottom_nav_bar.dart';
@@ -21,7 +20,7 @@ class Newhomepage extends StatefulWidget {
   @override
   State<Newhomepage> createState() => _NewhomepageState();
 }
-
+//widgets
 Widget _buildBrands(String image) {
   return CircleAvatar(
     backgroundColor: Color.fromARGB(255, 255, 255, 255),
@@ -34,7 +33,7 @@ Widget _buildBrands(String image) {
     ),
   );
 }
-
+//homespaces
 class _NewhomepageState extends State<Newhomepage> {
   final GlobalKey<ScaffoldState> _key = GlobalKey<ScaffoldState>();
 
