@@ -26,3 +26,11 @@ class _SettingPageState extends State<SettingPage> {
           ),
         ),
       ),
+      body: Container(
+        padding: EdgeInsets.only(left: 16, top: 25, right: 16),
+        child: ListView(
+          children: [
+            Text(
+              "Settings",
+              style: TextStyle(fontSize: 25, fontWeight: FontWeight.w500),
+            ),
