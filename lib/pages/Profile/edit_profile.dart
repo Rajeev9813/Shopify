@@ -74,4 +74,13 @@ class _ProfileInfoState extends State<ProfileInfo> {
     );
   }
 
+  Widget userPassword(AuthViewModel authVM) {
+    return Text(
+      authVM.loggedInUser != null
+          ? authVM.loggedInUser!.password.toString()
+          : "Guest",
+      style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold),
+    );
+  }
+
   
