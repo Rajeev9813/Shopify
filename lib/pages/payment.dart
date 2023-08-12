@@ -168,24 +168,6 @@ class _PaymentState extends State<Payment> {
         });
   }
 
-  // method to handle failure
-  void onFailure(PaymentFailureModel failure) {
-    showDialog(
-        context: context,
-        builder: (context) {
-          return AlertDialog(
-            title: Text("Failure"),
-            content: Text("Payment failed"),
-            actions: [
-              TextButton(
-                  onPressed: () {
-                    Navigator.pop(context);
-                  },
-                  child: Text("OK"))
-            ],
-          );
-        });
-  }
 
   // method to handle onCanceled
 
