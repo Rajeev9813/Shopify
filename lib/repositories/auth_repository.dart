@@ -3,6 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 
 import '../models/user_model.dart';
 import '../services/firebase_service.dart';
+
 class AuthRepository {
   CollectionReference<UserModel> userRef =
   FirebaseService.db.collection("users").withConverter<UserModel>(
@@ -31,6 +32,7 @@ class AuthRepository {
       rethrow;
     }
   }
+
   Future<UserCredential> login(String email, String password) async {
     try {
       print(email);
@@ -43,6 +45,7 @@ class AuthRepository {
       rethrow;
     }
   }
+
   Future<UserModel> getUserDetail(String id) async {
     try {
       final response = await userRef.where("user_id", isEqualTo: id).get();
@@ -55,6 +58,7 @@ class AuthRepository {
       rethrow;
     }
   }
+
   Future<bool> resetPassword(String email) async {
     try {
       var res = await FirebaseService.firebaseAuth
@@ -64,6 +68,7 @@ class AuthRepository {
       rethrow;
     }
   }
+
   Future<void> logout() async {
     try {
       await FirebaseService.firebaseAuth.signOut();
@@ -71,3 +76,14 @@ class AuthRepository {
       rethrow;
     }
   }
+
+  Future<bool?> editEmail(
+      {required UserModel user, required String userId}) async {
+    try {
+      final response = await userRef.doc(userId).set(user);
+      return true;
+    } catch (err) {
+      return false;
+    }
+  }
+}
