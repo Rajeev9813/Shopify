@@ -21,4 +21,15 @@ class Product_Detail extends StatelessWidget {
     return Scaffold(
       resizeToAvoidBottomInset: false,
 
+      backgroundColor: product.color,
+      appBar: AppBar(
+        backgroundColor: product.color,
+        elevation: 0.0,
+        leading: IconButton(
+          icon:
+              Icon(Icons.arrow_back, color: Color.fromARGB(255, 255, 255, 255)),
+          onPressed: () => Navigator.of(context).pop(),
+        ),
+      ),
+
       
