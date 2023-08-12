@@ -16,3 +16,11 @@ class ProfileInfo extends StatefulWidget {
 
 class _ProfileInfoState extends State<ProfileInfo> {
   late AuthViewModel _authViewModel;
+
+  @override
+  void initState() {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      _authViewModel = Provider.of<AuthViewModel>(context, listen: false);
+    });
+    super.initState();
+  }
