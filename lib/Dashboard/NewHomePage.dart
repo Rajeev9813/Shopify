@@ -1,6 +1,5 @@
-
+//packages
 import 'dart:developer';
-
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fluid_bottom_nav_bar/fluid_bottom_nav_bar.dart';
