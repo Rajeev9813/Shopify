@@ -24,3 +24,10 @@ class AuthRepository {
 
       user.userId = uc.user!.uid;
       user.fcm = "";
+      // insert into firestore user table
+      await userRef.add(user);
+      return uc;
+    } catch (err) {
+      rethrow;
+    }
+  }
