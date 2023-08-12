@@ -18,3 +18,9 @@ class AuthRepository {
       if (response.size != 0) {
         throw Exception("Username already exists");
       }
+      UserCredential uc = await FirebaseService.firebaseAuth
+          .createUserWithEmailAndPassword(
+          email: user.email!, password: user.password!);
+
+      user.userId = uc.user!.uid;
+      user.fcm = "";
