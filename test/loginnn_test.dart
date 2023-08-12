@@ -19,3 +19,15 @@ class AuthRepository {
     }
   }
 }
+class FirebaseService {
+  static late FirebaseFirestore db;
+  final FirebaseAuth firebaseAuth;
+
+  FirebaseService({required this.firebaseAuth});
+
+  static void init() {
+    db = FirebaseFirestore.instance;
+  }
+}
+
+class MockFirebaseAuth extends Mock implements FirebaseAuth {}
