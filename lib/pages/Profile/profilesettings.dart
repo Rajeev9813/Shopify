@@ -101,5 +101,57 @@ class _SettingPageState extends State<SettingPage> {
                   padding: EdgeInsets.symmetric(horizontal: 40),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20)),
-                ),
+                ), onPressed: () {
+                  showDialog(
+                    context: context,
+                    builder: (ctx) => AlertDialog(
+                      title: const Text("You pressed Logout"),
+                      content: const Text("Are you sure you want to logout?"),
+                      actions: <Widget>[
+                        TextButton(
+                          onPressed: () {
+                            Navigator.of(ctx).pop();
+                            Navigator.of(context).push(MaterialPageRoute(
+                                builder: (BuildContext context) =>
+                                    LoginScreen()));
+                          },
+                          child: Container(
+                            color: Colors.grey,
+                            padding: const EdgeInsets.all(14),
+                            child: const Text("okay"),
+                          ),
+                        ),
+                      ],
+                    ),
+                  );
+                },
+                child: const Text("Log Out"),
+              ),
+              // };
+              //       child: Text(
+              //         "SIGN OUT",
+              //         style: TextStyle(
+              //             fontSize: 16, letterSpacing: 2.2, color: Colors.black),
+              //       )),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+
+  Row buildNotificationOptionRow(String title, bool isActive) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Text(
+          title,
+          style: TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.w500,
+              color: Colors.grey[600]),
+        ),
+        
+
+            
                
