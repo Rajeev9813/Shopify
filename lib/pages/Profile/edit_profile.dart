@@ -32,3 +32,8 @@ class _ProfileInfoState extends State<ProfileInfo> {
       return;
     }
     final imageTemporary = File(image.path);
+
+    setState(() {
+      this._image = imageTemporary;
+    });
+  }
