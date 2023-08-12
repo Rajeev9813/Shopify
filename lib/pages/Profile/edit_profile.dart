@@ -171,12 +171,12 @@ class _ProfileInfoState extends State<ProfileInfo> {
                       ),
                       ListTile(
                         leading: Icon(Icons.phone_android),
-                        title: Text("Phone"),
+                        title: Text("username"),
                         subtitle: userPhone(authVM),
                       ),
                       ListTile(
                         leading: Icon(Icons.portrait),
-                        title: Text("Username"),
+                        title: Text("phone"),
                         subtitle: userUsername(authVM),
                       )
                     ],
