@@ -37,3 +37,12 @@ class _ProfileInfoState extends State<ProfileInfo> {
       this._image = imageTemporary;
     });
   }
+
+  Widget UserName(AuthViewModel authVM) {
+    return Text(
+      authVM.loggedInUser != null
+          ? authVM.loggedInUser!.fullName.toString()
+          : "Guest",
+      style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold),
+    );
+  }
