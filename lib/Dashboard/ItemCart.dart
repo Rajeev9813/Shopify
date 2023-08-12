@@ -27,7 +27,7 @@ class ItemCart extends StatelessWidget {
             ),
           );
         },
-        child: Container(
+        child: Container( //child
           // width: 150,
           decoration: BoxDecoration(
             color: product.color,
