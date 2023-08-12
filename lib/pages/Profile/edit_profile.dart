@@ -25,4 +25,17 @@ class _ProfileInfoState extends State<ProfileInfo> {
     super.initState();
   }
 
+  File? _image;
+  Future<void> getImage(ImageSource source) async {
+    final image = await ImagePicker().pickImage(source: source);
+    if (image == null) {
+      return;
+    }
+    final imageTemporary = File(image.path);
+
+    setState(() {
+      this._image = imageTemporary;
+    });
+  }
+
   
