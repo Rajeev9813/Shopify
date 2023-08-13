@@ -22,7 +22,7 @@ class Product_Detail extends StatelessWidget {
       resizeToAvoidBottomInset: false,
 
       backgroundColor: product.color,
-      appBar: AppBar(
+      appBar: AppBar( //scrollables
         backgroundColor: product.color,
         elevation: 0.0,
         leading: IconButton(
