@@ -20,7 +20,7 @@ class Product_Detail extends StatelessWidget {
     List<Item> _cart = [];
     return Scaffold(
       resizeToAvoidBottomInset: false,
-
+//bg colors
       backgroundColor: product.color,
       appBar: AppBar( //scrollables
         backgroundColor: product.color,
