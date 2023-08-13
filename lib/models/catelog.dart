@@ -16,7 +16,7 @@ class CatalogModel {
   //Get Item by position
   Item getByPosition(int pos) => items[pos];
 }
-
+//set and construct
 class Item {
   final int id;
   final String name;
