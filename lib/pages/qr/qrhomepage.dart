@@ -57,13 +57,13 @@ Widget build(BuildContext context) {
 				Navigator.of(context).push(MaterialPageRoute(builder: (context)=>
 															GenerateQR()));
 			},
-			child: Text("Generate QR Code", style: TextStyle(color: Color.fromARGB(255, 13, 13, 14)),),
-      style: ButtonStyle(
-			shape: MaterialStateProperty.all<RoundedRectangleBorder>(RoundedRectangleBorder(
-				borderRadius: BorderRadius.circular(20),
-				side: BorderSide(color: Color.fromARGB(255, 23, 24, 27)),
-			),
-			),),)
+			// child: Text("Generate QR Code", style: TextStyle(color: Color.fromARGB(255, 13, 13, 14)),),
+      // style: ButtonStyle(
+			// shape: MaterialStateProperty.all<RoundedRectangleBorder>(RoundedRectangleBorder(
+			// 	borderRadius: BorderRadius.circular(20),
+			// 	side: BorderSide(color: Color.fromARGB(255, 23, 24, 27)),
+			// ),
+			// ),),)
 		],
 		),
 	)

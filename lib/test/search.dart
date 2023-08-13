@@ -99,16 +99,16 @@ class _SearchState extends State<SearchPage> {
   }
 
 
-  void _filterProducts(String query) {
-    List<Product> filteredSingleProductData = _filteredProducts
-        .where((product) =>
-        product.title.toLowerCase().contains(query.toLowerCase()))
-        .toList();
+//   void _filterProducts(String query) {
+//     List<Product> filteredSingleProductData = _filteredProducts
+//         .where((product) =>
+//         product.title.toLowerCase().contains(query.toLowerCase()))
+//         .toList();
 
 
-    setState(() {
-      _filteredProducts = filteredSingleProductData;
+//     setState(() {
+//       _filteredProducts = filteredSingleProductData;
 
-    });
-  }
-}
+//     });
+//   }
+// }

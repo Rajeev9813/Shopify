@@ -53,13 +53,13 @@ Widget build(BuildContext context) {
 					}
 					},
 				//Title given on Button
-					child: Text("Generate QR Code",style: TextStyle(color: Color.fromARGB(255, 11, 11, 17),),),
-          style: ButtonStyle(
-			shape: MaterialStateProperty.all<RoundedRectangleBorder>(RoundedRectangleBorder(
+			// 		child: Text("Generate QR Code",style: TextStyle(color: Color.fromARGB(255, 11, 11, 17),),),
+      //     style: ButtonStyle(
+			// shape: MaterialStateProperty.all<RoundedRectangleBorder>(RoundedRectangleBorder(
 				
-					borderRadius: BorderRadius.circular(20),
-					side: BorderSide(color: Color.fromARGB(255, 10, 10, 11)),
-				),
+			// 		borderRadius: BorderRadius.circular(20),
+			// 		side: BorderSide(color: Color.fromARGB(255, 10, 10, 11)),
+			// 	),
 				),),)
 			),
 			],

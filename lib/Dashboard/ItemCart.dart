@@ -112,15 +112,15 @@ class ItemCart extends StatelessWidget {
                 ),
                 
                 Row(
-                  children: <Widget>[
-                    RichText(
-                      text: TextSpan(
-                        children: [
-                          TextSpan(text: "Price: ", style: TextStyle(color: Color.fromARGB(255, 96, 96, 96),
-                            fontSize: 15)),
-                          TextSpan(text: "Rs${product.price}", style: TextStyle(color: Color.fromARGB(255, 133, 122, 255),
-                            fontSize: 15, fontStyle: FontStyle.italic
-                          ))
+                  // children: <Widget>[
+                  //   RichText(
+                  //     text: TextSpan(
+                  //       children: [
+                  //         TextSpan(text: "Price: ", style: TextStyle(color: Color.fromARGB(255, 96, 96, 96),
+                  //           fontSize: 15)),
+                  //         TextSpan(text: "Rs${product.price}", style: TextStyle(color: Color.fromARGB(255, 133, 122, 255),
+                  //           fontSize: 15, fontStyle: FontStyle.italic
+                  //         ))
                         ],
                       )
                     )

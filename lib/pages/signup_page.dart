@@ -735,10 +735,10 @@ class ValidateSignup {
       return "Password is required";
     }
     if (value.length < 8) {
-      return "Password should be at least 8 character";
+      return "Password should be at least 8 character.";
     }
     if (otherPassword.text != value) {
-      return "Please make sure both the password are the same";
+      return "Please do make sure both the password are correct ";
     }
     return null;
   }

@@ -52,15 +52,15 @@ Widget build(BuildContext context) {
 			qrCodeResult = barcodeScanRes;
 		});
 		},
-		child: Text("Open Scanner",style: TextStyle(color: Color.fromARGB(255, 15, 15, 19)),),
-    style: ButtonStyle(
-		//Button having rounded rectangle border
-		shape: MaterialStateProperty.all<RoundedRectangleBorder>(RoundedRectangleBorder(
-		side: BorderSide(color: Colors.black12),
-		borderRadius: BorderRadius.circular(20.0),
-		),)
-	),
-  )
+	// 	child: Text("Open Scanner",style: TextStyle(color: Color.fromARGB(255, 15, 15, 19)),),
+  //   style: ButtonStyle(
+	// 	//Button having rounded rectangle border
+	// 	shape: MaterialStateProperty.all<RoundedRectangleBorder>(RoundedRectangleBorder(
+	// 	side: BorderSide(color: Colors.black12),
+	// 	borderRadius: BorderRadius.circular(20.0),
+	// 	),)
+	// ),
+  // )
 		],
 		),
 	),

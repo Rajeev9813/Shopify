@@ -29,7 +29,7 @@ class _ChangePasswordState extends State<ChangePassword> {
 
       await user.updatePassword(newPassword);
       ScaffoldMessenger.of(context)
-          .showSnackBar(const SnackBar(content: Text("Success")));
+          .showSnackBar(const SnackBar(content: Text("Successed")));
     } catch (e) {
       print(e);
       ScaffoldMessenger.of(context)
@@ -63,7 +63,7 @@ class _ChangePasswordState extends State<ChangePassword> {
         backgroundColor: Colors.black,
         centerTitle: true,
         title: Text(
-          "Change password",
+          "Change Password",
         ),
       ),
       body: SafeArea(
@@ -105,7 +105,7 @@ class _ChangePasswordState extends State<ChangePassword> {
                                 controller: emailController,
                                 validator: (value) {
                                   if (value == null || value.isEmpty) {
-                                    return "Please enter password";
+                                    return "Please enter the password";
                                   }
                                 },
                                 obscureText: _isVisible ? false : true,

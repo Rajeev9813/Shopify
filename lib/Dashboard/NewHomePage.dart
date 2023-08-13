@@ -715,11 +715,7 @@ class Top extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               physics: const BouncingScrollPhysics(),
               itemCount: product1.length,
-              // gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              //   crossAxisCount: 2,
-              //   //height of ticket paper
-              //   childAspectRatio: 2.2,
-              // ),
+       
               itemBuilder: (context, index) => ItemCart(
                 product: product1[index],
                 press: () => Navigator.push(
@@ -734,31 +730,6 @@ class Top extends StatelessWidget {
         ),
       ),
     );
-    // body: StreamBuilder(
-    //   stream: _items.snapshot(),
-    //   builder: (context, AsyncSnapshot<QuerySnapshot>streamSnapshot) {
-    //     if (streamSnapshot.hasData){
-    //       return ListView.builder(
-    //         itemCount: streamSnapshot.data!.dos.length,
-    //         itemBuilder:((context, index) {
-    //           final DocumentSnapshot documentSnapshot=streamSnapshot.data!.docs[index];
-    //           return Card(
-    //             child: Container(
-    //               child: Row(
-    //                 children: [
-    //                   Text(documentSnapshot['name']),
-    //                   Text(documentSnapshot['price'.toString()])
-    //                 ],
-    //               ),
-    //              ),
 
-    //           ),
-
-    //         }));
-    //     }
-    //     return const Center(
-    //       child: CircularProgressIndicator(),
-    //     );
-    //   }),
   }
 }

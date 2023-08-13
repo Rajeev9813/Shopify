@@ -47,7 +47,7 @@ class _LoginScreenState extends State<LoginScreen> {
         NotificationService.display(
           title: "Welcome back",
           body:
-          "Hello ${_authViewModel.loggedInUser?.fullName},\n Hope you are having a wonderful day.",
+              "Hello ${_authViewModel.loggedInUser?.fullName},\n Hope you are having a wonderful day.",
         );
         Navigator.of(context).pushReplacementNamed('/NewHomePage');
       }).catchError((e) {
@@ -171,8 +171,8 @@ class _LoginScreenState extends State<LoginScreen> {
                             onTap: () {
                               Navigator.push(context,
                                   MaterialPageRoute(builder: (context) {
-                                    return ForgotPassword();
-                                  }));
+                                return ForgotPassword();
+                              }));
                             },
                             child: const Text(
                               'Forgot Password?',
@@ -192,7 +192,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     child: ElevatedButton(
                         style: ButtonStyle(
                           shape: MaterialStateProperty.all<
-                              RoundedRectangleBorder>(
+                                  RoundedRectangleBorder>(
                               RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(20),
                                   side: BorderSide(
@@ -239,22 +239,22 @@ class _LoginScreenState extends State<LoginScreen> {
   }
 }
 
-class ValidateLogin {
-  static String? emailValidate(String? value) {
-    if (value == null || value.isEmpty) {
-      return "Email is required";
-    }
+// class ValidateLogin {
+//   static String? emailValidate(String? value) {
+//     if (value == null || value.isEmpty) {
+//       return "Email is required";
+//     }
 
-    return null;
-  }
+//     return null;
+//   }
 
-  static String? password(String? value) {
-    if (value == null || value.isEmpty) {
-      return "Password is required";
-    }
-    return null;
-  }
-}
+//   static String? password(String? value) {
+//     if (value == null || value.isEmpty) {
+//       return "Password is required";
+//     }
+//     return null;
+//   }
+// }
 
 
 

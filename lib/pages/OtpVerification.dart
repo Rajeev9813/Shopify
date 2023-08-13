@@ -45,7 +45,7 @@ class _OtpVerifyState extends State<OtpVerify> {
                   )),
             ),
             Text(
-              "Please enter 5 digit OTP code",
+              "Please enter earlier sent OTP code",
               style: TextStyle(
                 fontSize: 15,
                 fontWeight: FontWeight.w400,
@@ -99,7 +99,7 @@ class _OtpVerifyState extends State<OtpVerify> {
                       ),
                       children: [
                     TextSpan(
-                      text: "Resend code",
+                      text: "please Resend code",
                       style: TextStyle(color: Colors.red),
                     ),
                   ])),
