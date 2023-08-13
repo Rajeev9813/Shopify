@@ -36,9 +36,9 @@ class CartProductCard extends StatelessWidget {
 
   CartProductCard(
       {required this.controller,
-      required this.product,
-      required this.quantity,
-      required this.index});
+        required this.product,
+        required this.quantity,
+        required this.index});
 
   @override
   Widget build(BuildContext context) {
@@ -50,7 +50,7 @@ class CartProductCard extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(top:10,bottom: 10),
             child: Image.asset(
-              
+
               product.image,
               width: 80,
               height: 60,
@@ -59,45 +59,45 @@ class CartProductCard extends StatelessWidget {
           ),
           Expanded(
               child: Column(
-            children: [
-              Text(
-                product.title,
-                style: TextStyle(
+                children: [
+                  Text(
+                    product.title,
+                    style: TextStyle(
 
-                    // fontWeight: FontWeight.bold
+                      // fontWeight: FontWeight.bold
                     ),
-              ),
-              Text("Rs${product.price}",
-                  style: TextStyle(fontWeight: FontWeight.bold))
-            ],
-          )),
+                  ),
+                  Text("Rs${product.price}",
+                      style: TextStyle(fontWeight: FontWeight.bold))
+                ],
+              )),
           IconButton(
               onPressed: () {
                 controller.removeProduct(product);
-                       ScaffoldMessenger.of(context).showSnackBar(
-  SnackBar(
-    content: Text("Product is Removed"
-      " You have added the ${product.title} to the cart",
-      textAlign: TextAlign.center,
-    ),
-    duration: Duration(seconds: 2),
-  ),
-);
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    content: Text("Product is Removed"
+                        " You have added the ${product.title} to the cart",
+                      textAlign: TextAlign.center,
+                    ),
+                    duration: Duration(seconds: 2),
+                  ),
+                );
               },
               icon: Icon(Icons.remove_circle_outline)),
           Text('${quantity}'),
           IconButton(
               onPressed: () {
                 controller.addProduct(product);
-                   ScaffoldMessenger.of(context).showSnackBar(
-  SnackBar(
-    content: Text("Product is Added"
-      " You have added the ${product.title} to the cart",
-      textAlign: TextAlign.center,
-    ),
-    duration: Duration(seconds: 2),
-  ),
-);
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    content: Text("Product is Added"
+                        " You have added the ${product.title} to the cart",
+                      textAlign: TextAlign.center,
+                    ),
+                    duration: Duration(seconds: 2),
+                  ),
+                );
               },
               icon: Icon(Icons.add_circle_outline)),
         ],
