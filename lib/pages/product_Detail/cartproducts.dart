@@ -90,10 +90,7 @@ class CartProductCard extends StatelessWidget {
               onPressed: () {
                 controller.addProduct(product);
                    ScaffoldMessenger.of(context).showSnackBar(
-  SnackBar(
-    content: Text("Product is Added"
-      " You have added the ${product.title} to the cart",
-      textAlign: TextAlign.center,
+  
     ),
     duration: Duration(seconds: 2),
   ),
