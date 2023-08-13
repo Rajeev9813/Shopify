@@ -1,5 +1,3 @@
-// import 'package:smooth_star_rating/smooth_star_rating.dart';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:get/get.dart';
@@ -378,46 +376,6 @@ class Body extends StatelessWidget {
                                       builder: ((context) => Product_Detail(
                                             product: product2[index],
                                           )))))
-                          // SingleChildScrollView(
-                          //   child: Padding(
-                          //     padding: const EdgeInsets.all(9),
-                          //     child: SingleChildScrollView(
-                          //       physics: BouncingScrollPhysics(),
-                          //       scrollDirection: Axis.horizontal,
-                          //       child: Row(
-                          //         children: [
-                          //           Column(
-                          //             crossAxisAlignment:
-                          //                 CrossAxisAlignment.start,
-                          //             children: [
-                          //               Padding(
-                          //                 padding:
-                          //                     const EdgeInsets.only(top: 10),
-                          //                 child: Row(
-                          //                   children: <Widget>[
-                          //                     _buildNewArrivals(
-                          //                         image: "nb550.png",
-                          //                         price: 9000,
-                          //                         name: "New Balance 550"),
-                          //                     _buildNewArrivals(
-                          //                         image: "vegan_black.png",
-                          //                         price: 8000,
-                          //                         name:
-                          //                             "DR Martens Vegan Black"),
-                          //                     _buildNewArrivals(
-                          //                         image: "stan.png",
-                          //                         price: 9000,
-                          //                         name: "Stan Smith"),
-                          //                   ],
-                          //                 ),
-                          //               ),
-                          //             ],
-                          //           ),
-                          //         ],
-                          //       ),
-                          //     ),
-                          //   ),
-                          // ),
                         ],
                       ),
                     ),
