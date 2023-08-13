@@ -35,7 +35,7 @@ class CartPage extends StatelessWidget {
   const CartPage({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) { //widgets
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
