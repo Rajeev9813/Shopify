@@ -69,7 +69,7 @@ class _NewhomepageState extends State<Newhomepage> {
         AndroidNotificationDetails(
       "channelId",
       "channelName",
-      importance: Importance.max,
+      importance: Importance.max,//priorty
       priority: Priority.max,
       ticker: "test",
       enableLights: true,
