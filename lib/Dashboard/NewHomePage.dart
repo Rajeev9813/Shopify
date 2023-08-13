@@ -22,7 +22,7 @@ class Newhomepage extends StatefulWidget {
 }
 //widgets
 Widget _buildBrands(String image) {
-  return CircleAvatar(
+  return CircleAvatar( //for image 
     backgroundColor: Color.fromARGB(255, 255, 255, 255),
     maxRadius: 40,
     child: Container(
