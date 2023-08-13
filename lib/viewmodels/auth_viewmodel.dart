@@ -16,7 +16,7 @@ class AuthViewModel with ChangeNotifier {
   UserModel? get loggedInUser => _loggedInUser;
 
   Future<void> login(String email, String password) async {
-    try {
+    try { //exception
       var response = await AuthRepository().login(email, password);
       print(response);
       _user = response.user;

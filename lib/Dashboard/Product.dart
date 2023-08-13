@@ -12,7 +12,7 @@
  // categories page//
 
 class Product{
-  
+  //CLASS
   final String image, title,description;
   final int price,id;
   final Color color;
@@ -30,6 +30,7 @@ class Product{
 
   get product1 => null;
 } 
+//products 
   List<Product> product1=[
     Product(
       id:1,

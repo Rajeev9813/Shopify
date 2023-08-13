@@ -13,7 +13,7 @@ import 'package:jutta_junction/widgets/greeting_widget.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 import '../main.dart';
-
+//stful
 class Newhomepage extends StatefulWidget {
   const Newhomepage({super.key});
 
@@ -21,8 +21,8 @@ class Newhomepage extends StatefulWidget {
   State<Newhomepage> createState() => _NewhomepageState();
 }
 //widgets
-Widget _buildBrands(String image) {
-  return CircleAvatar(
+Widget _buildBrands(String image) { //set images
+  return CircleAvatar( //for image 
     backgroundColor: Color.fromARGB(255, 255, 255, 255),
     maxRadius: 40,
     child: Container(
@@ -69,11 +69,11 @@ class _NewhomepageState extends State<Newhomepage> {
         AndroidNotificationDetails(
       "channelId",
       "channelName",
-      importance: Importance.max,
+      importance: Importance.max,//priorty
       priority: Priority.max,
       ticker: "test",
       enableLights: true,
-      enableVibration: true,
+      enableVibration: true, //CHANGED HERE
     );
 
     //for ios
@@ -113,7 +113,7 @@ class _NewhomepageState extends State<Newhomepage> {
         await flutterLocalNotificationsPlugin.getNotificationAppLaunchDetails();
     if (details != null) {
       if (details.didNotificationLaunchApp) {
-        NotificationResponse? response = details.notificationResponse;
+        NotificationResponse? response = details.notificationResponse; //respobse code
         if (response != null) {
           String? payload = response.payload;
           log("Noitification payload: $payload");
@@ -124,7 +124,7 @@ class _NewhomepageState extends State<Newhomepage> {
 
   @override
   void initState() {
-    super.initState();
+    super.initState(); //CHECKS
     checkForNotification();
     showNotification();
     getUserData();

@@ -39,7 +39,7 @@ class _RedturnRefundState extends State<RedturnRefund> {
               GFAccordion(
                 collapsedIcon: Icon(Icons.add),
                 expandedIcon: Icon(Icons.minimize),
-                title: "What are the policies?",
+                title: "What are the policies?", //questions
                 content:
                     'If the items you bought from Shopify didn’t meet your expectations, then you can return them for either a refund or exchange. \n \n 1. If you paid with credit/debit card or gift card, you may return your item to a store for a refund or exchange. To find a store near you, please click here. . \n \n 2.Please keep your return tracking number and order number for reference should you need to contact us about your return or exchange.\n \n 3.If you believe your item is defective, it must be returned within 45 days.\n \n 4.If the item is deemed defective, we will process a return in accordance with our return policy. \n \n 5.If the item is deemed to be not defective, it will be returned to you.\n \n 6.We dont accept COD returns.\n \n 7.If you request express or overnight shipping for your exchange, then you will cover the full shipping cost.\n \n 8.We will send your exchanged items to only one address.',
               ),

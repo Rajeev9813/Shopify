@@ -8,7 +8,7 @@ import 'package:velocity_x/velocity_x.dart';
 
 class Payment extends StatefulWidget {
   const Payment({Key? key}) : super(key: key);
-
+//overide
   @override
   _PaymentState createState() => _PaymentState();
 }
@@ -92,7 +92,7 @@ class _PaymentState extends State<Payment> {
                   );
                 },
                 child: Image.asset(
-                  'assets/images/cod.png',
+                  'assets/images/cod.png', //cash on delivery image 
                   width: 100,
                 ),
               ),

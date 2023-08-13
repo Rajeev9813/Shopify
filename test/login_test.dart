@@ -21,7 +21,7 @@ void main() {
     await tester.enterText(find.byType(TextFormField), 'ishwar@gmail.com');
 
     // Verify that the text was entered correctly
-    expect(find.text('ishwar@gmail.com'), findsOneWidget);
+    expect(find.text('ishwar@gmail.com'), findsOneWidget); //EDIT
   });
 }
 

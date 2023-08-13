@@ -22,7 +22,7 @@ class ItemCart extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(15),
-      child: InkWell(
+      child: InkWell( //push 
         onTap: () {
           Navigator.push(
             context,
@@ -49,7 +49,7 @@ class ItemCart extends StatelessWidget {
             padding: const EdgeInsets.all(10),
             child: Column(
               
-              children: <Widget>[
+              children: <Widget>[ //WIDGETS
                 
                 Row(
                   children: [
@@ -57,7 +57,7 @@ class ItemCart extends StatelessWidget {
                   ],
                 ),
                   
-                
+                //PADDING
                 Padding(
                   padding: const EdgeInsets.only(top:10),
                   child: Row(
