@@ -48,9 +48,8 @@ class CartProductCard extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Padding(
-            padding: const EdgeInsets.only(top:10,bottom: 10),
+            padding: const EdgeInsets.only(top: 10, bottom: 10),
             child: Image.asset(
-              
               product.image,
               width: 80,
               height: 60,
@@ -62,10 +61,7 @@ class CartProductCard extends StatelessWidget {
             children: [
               Text(
                 product.title,
-                style: TextStyle(
-
-                    // fontWeight: FontWeight.bold
-                    ),
+                style: TextStyle(),
               ),
               Text("Rs${product.price}",
                   style: TextStyle(fontWeight: FontWeight.bold))
@@ -74,30 +70,32 @@ class CartProductCard extends StatelessWidget {
           IconButton(
               onPressed: () {
                 controller.removeProduct(product);
-                       ScaffoldMessenger.of(context).showSnackBar(
-  SnackBar(
-    content: Text("Product is Removed"
-      " You have added the ${product.title} to the cart",
-      textAlign: TextAlign.center,
-    ),
-    duration: Duration(seconds: 2),
-  ),
-);
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    content: Text(
+                      "Product is Removed"
+                      " You have added the ${product.title} to the cart",
+                      textAlign: TextAlign.center,
+                    ),
+                    duration: Duration(seconds: 2),
+                  ),
+                );
               },
               icon: Icon(Icons.remove_circle_outline)),
           Text('${quantity}'),
           IconButton(
               onPressed: () {
                 controller.addProduct(product);
-                   ScaffoldMessenger.of(context).showSnackBar(
-  SnackBar(
-    content: Text("Product is Added"
-      " You have added the ${product.title} to the cart",
-      textAlign: TextAlign.center,
-    ),
-    duration: Duration(seconds: 2),
-  ),
-);
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    content: Text(
+                      "Product is Added"
+                      " You have added the ${product.title} to the cart",
+                      textAlign: TextAlign.center,
+                    ),
+                    duration: Duration(seconds: 2),
+                  ),
+                );
               },
               icon: Icon(Icons.add_circle_outline)),
         ],
