@@ -124,7 +124,7 @@ class _NewhomepageState extends State<Newhomepage> {
 
   @override
   void initState() {
-    super.initState();
+    super.initState(); //CHECKS
     checkForNotification();
     showNotification();
     getUserData();
