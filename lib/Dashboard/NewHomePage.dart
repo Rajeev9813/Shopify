@@ -73,7 +73,7 @@ class _NewhomepageState extends State<Newhomepage> {
       priority: Priority.max,
       ticker: "test",
       enableLights: true,
-      enableVibration: true,
+      enableVibration: true, //CHANGED HERE
     );
 
     //for ios
