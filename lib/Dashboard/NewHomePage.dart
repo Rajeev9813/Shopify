@@ -113,7 +113,7 @@ class _NewhomepageState extends State<Newhomepage> {
         await flutterLocalNotificationsPlugin.getNotificationAppLaunchDetails();
     if (details != null) {
       if (details.didNotificationLaunchApp) {
-        NotificationResponse? response = details.notificationResponse;
+        NotificationResponse? response = details.notificationResponse; //respobse code
         if (response != null) {
           String? payload = response.payload;
           log("Noitification payload: $payload");
