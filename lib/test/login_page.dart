@@ -239,22 +239,22 @@ class _LoginScreenState extends State<LoginScreen> {
   }
 }
 
-// class ValidateLogin {
-//   static String? emailValidate(String? value) {
-//     if (value == null || value.isEmpty) {
-//       return "Email is required";
-//     }
+class ValidateLogin {
+  static String? emailValidate(String? value) {
+    if (value == null || value.isEmpty) {
+      return "Email is required";
+    }
 
-//     return null;
-//   }
+    return null;
+  }
 
-//   static String? password(String? value) {
-//     if (value == null || value.isEmpty) {
-//       return "Password is required";
-//     }
-//     return null;
-//   }
-// }
+  static String? password(String? value) {
+    if (value == null || value.isEmpty) {
+      return "Password is required";
+    }
+    return null;
+  }
+}
 
 
 
