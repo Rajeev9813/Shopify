@@ -11,7 +11,7 @@ import 'package:flutter/material.dart';
 // }
 
 class Product{
-  
+  //CLASS
   final String image, title,description;
   final int price,id;
   final Color color;
