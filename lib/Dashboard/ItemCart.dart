@@ -45,7 +45,7 @@ class ItemCart extends StatelessWidget {
             padding: const EdgeInsets.all(10),
             child: Column(
               
-              children: <Widget>[
+              children: <Widget>[ //WIDGETS
                 
                 Row(
                   children: [
