@@ -13,7 +13,7 @@ import 'package:jutta_junction/widgets/greeting_widget.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 import '../main.dart';
-
+//stful
 class Newhomepage extends StatefulWidget {
   const Newhomepage({super.key});
 
