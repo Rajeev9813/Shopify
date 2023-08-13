@@ -17,7 +17,7 @@ Widget _buildNewArrivals(
     child: Container(
       height: 200,
       width: 150,
-      child: Column(
+      child: Column( //child class
         children: <Widget>[
           Container(
             height: 120,
