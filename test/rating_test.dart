@@ -19,7 +19,7 @@ void main() async {
   test('RatingReviewRepository: getData', () async {
     // Call the 'getData' method and store the result in a stream
     final Stream<QuerySnapshot<RatingReviewModel>> response =
-        ratingReviewRepository.getData();
+        ratingReviewRepository.getData(); //repo get
 
     // Verify that the result is a stream of 'QuerySnapshot' objects
     expect(response, isA<Stream<QuerySnapshot<RatingReviewModel>>>());
