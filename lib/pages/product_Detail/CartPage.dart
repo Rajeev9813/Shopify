@@ -4,7 +4,6 @@ import 'package:flutter/src/widgets/framework.dart';
 
 import 'cart_total.dart';
 import 'cartproducts.dart';
-
 // class CartPage extends StatelessWidget {
 //   const CartPage({super.key});
 
