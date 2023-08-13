@@ -21,7 +21,7 @@ class Newhomepage extends StatefulWidget {
   State<Newhomepage> createState() => _NewhomepageState();
 }
 //widgets
-Widget _buildBrands(String image) {
+Widget _buildBrands(String image) { //set images
   return CircleAvatar( //for image 
     backgroundColor: Color.fromARGB(255, 255, 255, 255),
     maxRadius: 40,
