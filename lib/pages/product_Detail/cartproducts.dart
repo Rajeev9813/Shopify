@@ -18,7 +18,7 @@ class CartProducts extends StatelessWidget {
               itemCount: controller.products.length,
               itemBuilder: ((BuildContext context, int index) {
                 return CartProductCard(
-                  controller: controller,
+                  controller: controller, //controller inject
                   product: controller.products.keys.toList()[index],
                   quantity: controller.products.values.toList()[index],
                   index: index,
