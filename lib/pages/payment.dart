@@ -92,7 +92,7 @@ class _PaymentState extends State<Payment> {
                   );
                 },
                 child: Image.asset(
-                  'assets/images/cod.png',
+                  'assets/images/cod.png', //cash on delivery image 
                   width: 100,
                 ),
               ),
