@@ -12,7 +12,7 @@ import '../../models/catelog.dart';
 
 class Product_Detail extends StatelessWidget {
   final Product product;
-  final cartController = Get.put(CartController());//cartcontroller to define after its added
+  final cartController = Get.put(CartController());
   Product_Detail({key, required this.product}) : super(key: key);
 
   @override
@@ -31,26 +31,24 @@ class Product_Detail extends StatelessWidget {
           onPressed: () => Navigator.of(context).pop(),
         ),
       ),
-
       body: Body(
         product: product,
       ),
-
-      // bottomNavigationBar: CurvedNavigationBar(
-      //   backgroundColor: Color.fromARGB(255, 2, 5, 8),
-      //   items: <Widget>[
-      //     Icon(Icons.home),
-      //     Icon(Icons.chat),
-      //     Icon(Icons.shopping_cart),
-      //     Icon(
-      //       Icons.account_box,
-      //       size: 30,
-      //     ),
-      //   ],
-      //   onTap: (index) {
-      //     //Handle button ta
-      //   },
-      // ),
+      bottomNavigationBar: CurvedNavigationBar(
+        backgroundColor: Color.fromARGB(255, 2, 5, 8),
+        items: <Widget>[
+          Icon(Icons.home),
+          Icon(Icons.chat),
+          Icon(Icons.shopping_cart),
+          Icon(
+            Icons.account_box,
+            size: 30,
+          ),
+        ],
+        onTap: (index) {
+          //Handle button ta
+        },
+      ),
     );
   }
 }

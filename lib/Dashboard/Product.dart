@@ -1,7 +1,7 @@
-import 'package:flutter/material.dart';
+ import 'package:flutter/material.dart';
 // class CatalogModel {
 //   static List<Product> product;
-
+//categories
 //   // Get Item by ID
 //   Product getById(int id) =>
 //       product.firstWhere((element) => element.id == id, orElse: null);
@@ -9,6 +9,7 @@ import 'package:flutter/material.dart';
 //   // Get Item by position
 //   Product getByPosition(int pos) => product[pos];
 // }
+ // categories page//
 
 class Product{
   //CLASS
@@ -34,7 +35,7 @@ class Product{
     Product(
       id:1,
       title:"Jordan",
-      price:14000,
+      price:15000,
       description:"jordan shoes is one of the best selling shoes in our app",
       image:"assets/images/jordan4.png",
       color: Color.fromARGB(255, 236, 226, 226),
@@ -57,7 +58,7 @@ class Product{
 ),
     Product(
       id:4,
-      title:"Vegan Black",
+      title:" Vegan Black",
       price:14000,
       description:"Non leather, cruelty free and Leather free shoes, boots and trainers .",
       image:"assets/images/vegan_black.png",
